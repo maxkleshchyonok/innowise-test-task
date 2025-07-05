@@ -1,0 +1,55 @@
+{
+  "name": "innowise-test-task",
+  "version": "1.0.0",
+  "description": "https://docs.google.com/document/d/1zpXXeSae-BlcxPKgw3DhxZA92cspVailrPYoaXSYrW8/edit?tab=t.0#heading=h.rtfo3o71ktll",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack serve --mode=development --open",
+    "watch": "webpack --mode=development --watch",
+    "prepare": "husky",
+    "lint": "eslint --config eslint.config.js .",
+    "lint:fix": "eslint --config eslint.config.js . --ext .js --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxkleshchyonok/innowise-test-task.git"
+  },
+  "author": "Maksim Kleshchenok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxkleshchyonok/innowise-test-task/issues"
+  },
+  "homepage": "https://github.com/maxkleshchyonok/innowise-test-task#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.30.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.1",
+    "html-webpack-plugin": "^5.6.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --config eslint.config.js --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md,html}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@eslint/eslintrc": "^3.3.1"
+  }
+}

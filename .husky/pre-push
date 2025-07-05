@@ -1,0 +1,13 @@
+echo "🔎 Running ESLint check before push..."
+npm run lint || {
+  echo "❌ ESLint check failed. Push blocked. Please fix the errors before pushing."
+  exit 1
+}
+
+echo "🧹 Running Prettier check before push..."
+npm run format:check || {
+  echo "❌ Prettier check failed. Push blocked. Please run 'npm run format' to fix formatting issues."
+  exit 1
+}
+
+echo "✅ All checks passed! Push allowed."
