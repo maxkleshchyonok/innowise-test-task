@@ -11,15 +11,24 @@ export default function setupCalculator() {
   let activeOperatorBtn = null;
 
   function setActiveOperator(value) {
-    if (activeOperatorBtn) activeOperatorBtn.classList.remove('active');
+    if (activeOperatorBtn) {
+      activeOperatorBtn.classList.remove('active');
+    }
+
     activeOperatorBtn = Array.from(buttons).find(
       btn => btn.dataset.value === value && btn.classList.contains('operator')
     );
 
-    if (activeOperatorBtn) activeOperatorBtn.classList.add('active');
+    if (activeOperatorBtn) {
+      activeOperatorBtn.classList.add('active');
+    }
   }
+
   function clearActiveOperator() {
-    if (activeOperatorBtn) activeOperatorBtn.classList.remove('active');
+    if (activeOperatorBtn) {
+      activeOperatorBtn.classList.remove('active');
+    }
+
     activeOperatorBtn = null;
   }
 
