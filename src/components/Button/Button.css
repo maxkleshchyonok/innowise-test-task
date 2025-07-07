@@ -1,0 +1,54 @@
+.buttons,
+.calculator-buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6%;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 1.8vw, 5rem);
+  padding: 0.75rem;
+  border: none;
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  aspect-ratio: 1 / 1;
+}
+
+.button.number {
+  background: var(--button-number-bg);
+}
+
+.button.operator {
+  background: var(--button-operator-bg);
+  font-size: 2.5rem;
+}
+
+.button.func {
+  background: var(--button-func-bg);
+}
+
+.button:hover {
+  filter: var(--button-hover-filter);
+}
+
+.button:active {
+  filter: var(--button-focus-filter);
+}
+
+.button.active {
+  filter: var(--button-focus-filter);
+}
+
+.button.zero {
+  grid-column: span 2;
+  aspect-ratio: unset;
+  height: auto;
+}

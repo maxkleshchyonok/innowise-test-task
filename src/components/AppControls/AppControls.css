@@ -1,0 +1,27 @@
+.controls-container {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  padding: 3%;
+}
+
+.controls-container button {
+  width: 15px;
+  height: 15px;
+  min-height: 1vw;
+  min-width: 1vw;
+  border: none;
+  border-radius: 50%;
+}
+
+#control-close {
+  background-color: red;
+}
+
+#control-minimize {
+  background-color: orange;
+}
+
+#control-resize {
+  background-color: green;
+}
